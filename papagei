@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+while (true) do
+read w
+case $w in 
+'schnauze' ) echo '> Schade:-('; exit;;
+* ) echo '>' $w | tr '[:lower:]' '[:upper:]'
+esac
+done
+

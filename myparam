@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+echo "aufgerufenes Programm: " $0
+for i in $@
+do
+echo "Parameter: $i"
+done
+

@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+echo 'Auflistung Dateiinhalt:'
+# comments
+ls 
+
