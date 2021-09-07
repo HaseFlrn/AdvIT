@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+sort -u -f $1

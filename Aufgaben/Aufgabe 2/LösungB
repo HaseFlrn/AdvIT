@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+echo -e "wc gibt Zeilen, Wörter, Bytes an\necho erstellt eine neue Datei mit einer Leerzeile"
+echo "daran wird eine weitere angehängt"
+echo -e "als Ergebnis:\n\tZeilen:2\n\tWörter: 0\n\tBytes: 2\n\tDateiname"
+echo > testf;echo >> testf; wc testf

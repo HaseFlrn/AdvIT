@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+echo "cat > eins
+4 mal Eingabe
+cat > zwei
+4 mal Eingabe
+cat -n eins zwei > drei"
