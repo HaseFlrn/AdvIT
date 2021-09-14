@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+mkdir test
+touch test1
+touch test2
+touch test3
+cd test 
+touch test1
+touch test2
+touch test3
+cd ..
+

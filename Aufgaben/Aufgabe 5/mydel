@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+# Papierkorbpfad speichern
+PAPIERKORB=$HOME/Papierkorb
+
+for i in $@
+do
+if [ -d $i ]
+then
+	# Kopie anlegen
+	cp -r $i $PAPIERKORB
+	rm -r $i
+fi
+if [ -f $i ]
+then
+	# Kopie anlegen
+	cp $i $PAPIERKORB
+	rm $i
+fi
+done
+

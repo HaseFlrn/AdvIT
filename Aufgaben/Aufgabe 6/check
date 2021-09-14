@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+#initialize Array
+NAMES=( )
+
+while (true) do
+read w
+	case $w in 
+	'q' ) break;;
+	'quit' ) break;;
+	* ) NAMES=("${NAMES[@]}" "${w,,}");;
+	esac
+continue
+done
+echo 'Notenliste :'
+echo '<==========================>'
+for i in "${NAMES[@]}"
+do
+	case $i in
+	'carla') echo "$i" ' 1.0';;
+	'hans') echo "$i" ' 1.0';;
+	'berta') echo "$i" ' 4.0';;
+	'uta') echo "$i" ' 4.0';;
+	'georg') echo "$i" ' 4.0';;
+	* ) echo "$i" ' 5.0';;
+	esac
+done
+
