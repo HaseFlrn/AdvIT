@@ -1,3 +1,3 @@
 # AdvIT
 
-In diesem Repo werdern Mitschriften am Xubuntu-PC und alle Aufgaben Advanced IT gespeichert.
+In diesem Repo werdern Mitschriften und alle Aufgaben Advanced IT gespeichert.
