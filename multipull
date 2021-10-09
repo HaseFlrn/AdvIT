@@ -1,12 +1,8 @@
 #!/usr/bin/bash
-for $i in `ls`
-do
-if [ -d $i]
-for $j in `ls -a`
-do
-if [ -d $j -eq '.git']
-git pull
-exit
-done
-fi
+for repo in `find . -maxdepth 4 -name .git`; do
+   base=`dirname $repo`
+   pushd $base >/dev/null 2>&1
+   echo '<====== Try pulling in ' $base
+   git pull
+   popd >/dev/null 2>&1
 done
