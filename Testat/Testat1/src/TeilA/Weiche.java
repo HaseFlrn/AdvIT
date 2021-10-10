@@ -9,7 +9,6 @@ public class Weiche {
 	private int[] lok;
 	private int nextfree = 0;
 	private int nextfull = 0;
-	private Semaphore mutex = new Semaphore(1, true);
 	private Semaphore full = new Semaphore(0, true);
 	private Semaphore empty;
 
@@ -23,7 +22,6 @@ public class Weiche {
 		try {
 			System.out.println("Lok0 möchte in die Mitte.");
 			empty.acquire();
-			mutex.acquire();
 			lok[nextfree]++;
 			nextfree = (nextfree + 1) % size;
 			System.out.println("Lok0 ist in der Mitte.");
@@ -34,7 +32,6 @@ public class Weiche {
 
 	public void exitLok0() {
 		System.out.println("Lok0 fährt aus der Mitte.");
-		mutex.release();
 		full.release();
 	} //exitLok0
 
@@ -42,7 +39,6 @@ public class Weiche {
 		try {
 			System.out.println("        Lok1 möchte in die Mitte.");
 			full.acquire();
-			mutex.acquire();
 			lok[nextfull]--;
 			nextfull = (nextfull + 1) % size;
 			System.out.println("        Lok1 ist in der Mitte.");
@@ -53,7 +49,6 @@ public class Weiche {
 
 	public void exitLok1() {
 		System.out.println("        Lok1 fährt aus der Mitte.");
-		mutex.release();
 		empty.release();
 	} //exitLok1
 
