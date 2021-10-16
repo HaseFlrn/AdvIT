@@ -6,22 +6,20 @@ public class Weiche {
 
   private boolean weicheFrei = true;
   private int turn = 0;
-  private int lokAnzahl;
+  private int lokAnzahl = 2;
   private Semaphore mutex = new Semaphore(1, true);
-  private boolean[] waiting; //Verwaltung, welche Loks warten
-  private Semaphore[] privesem; // private Semaphore
+  private boolean[] waiting = new boolean[lokAnzahl]; //Verwaltung, welche Loks warten
+  private Semaphore[] privesem = new Semaphore[lokAnzahl]; // private Semaphore
   private static final int NO_ID = -1; //undefinierte Thread-ID
 
-  public Weiche(int lokAnzahl) {
-    this.lokAnzahl = lokAnzahl;
-    waiting = new boolean[lokAnzahl];
-    privesem = new Semaphore[lokAnzahl];
+  public Weiche() {
     for (int i = 0; i < lokAnzahl; i++) {
       waiting[i] = false;
       privesem[i] = new Semaphore(0, true);
     }
   } //constructor
 
+  //enter und exit entsprechend der Aufgabenstellung auseinandergezogen
   public void enter(int lokId) {
     try {
       mutex.acquire();
