@@ -1,10 +1,11 @@
 import java.io.*;
 import java.net.*;
-import java.util.UUID;
+import java.util.UUID; //Klasse, die unique Ids erstellt anhand des System-Seeds
 
 public class MsgServer {
 
   public static final int DEFAULT_PORT = 7777;
+  // TODO: edit to your respective path
   public static final String PATH_TO_DESTINATION =
     "/home/florian/Desktop/Messages/";
 
@@ -29,7 +30,7 @@ public class MsgServer {
       System.err.println(e);
     }
     return false;
-  }
+  } //createAndWirte
 
   public static String readFromFile(String key) {
     BufferedReader fileReader = null;
@@ -48,7 +49,7 @@ public class MsgServer {
       System.err.println(e);
     }
     return message;
-  }
+  } //readFromFile
 
   public static void main(String[] args) {
     int port = DEFAULT_PORT;
@@ -105,5 +106,5 @@ public class MsgServer {
     } catch (IOException e) {
       System.err.println(e);
     }
-  }
+  } //main
 }
