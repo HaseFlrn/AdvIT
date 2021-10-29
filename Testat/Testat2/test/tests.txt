@@ -1,0 +1,51 @@
+# Nachricht speichern
+
+## Starte Client
+Connected to server
+Please write 'SAVE value' and hit enter to send your message(value).
+Please write 'GET key' and hit enter to get your requested message.
+
+## Eingabe
+SAVE Ich möchte eine Nachricht speichern
+
+## Ausgabe
+KEY 12728ed5-ee74-4dfd-b655-ac3c8b3213cf
+
+# Nachricht abrufen
+
+## Starte Client
+Connected to server
+Please write 'SAVE value' and hit enter to send your message(value).
+Please write 'GET key' and hit enter to get your requested message.
+
+## Eingabe
+GET 12728ed5-ee74-4dfd-b655-ac3c8b3213cf
+
+## Ausgabe
+OK Ich möchte eine Nachricht speichern
+
+# Abruf mit nicht-existierenden key
+
+## Starte Client
+Connected to server
+Please write 'SAVE value' and hit enter to send your message(value).
+Please write 'GET key' and hit enter to get your requested message.
+
+## Eingabe
+GET nicht-existierender-key
+
+## Ausgabe
+FAILED 
+
+# falscher Befehl
+
+## Starte Client
+Connected to server
+Please write 'SAVE value' and hit enter to send your message(value).
+Please write 'GET key' and hit enter to get your requested message.
+
+## Eingabe
+SPEICHER meinen Text
+
+## Ausgabe
+FAILED 

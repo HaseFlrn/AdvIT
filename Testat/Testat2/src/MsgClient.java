@@ -10,6 +10,7 @@ public class MsgClient {
     PrintWriter networkOut = null;
     BufferedReader networkIn = null;
     Socket socket = null;
+
     try {
       socket = new Socket(hostname, SERVER_PORT);
       System.out.println("Connected to server");
@@ -40,5 +41,5 @@ public class MsgClient {
         e.printStackTrace();
       }
     }
-  }
+  } //main
 }
